@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness & Radiology Dash</title>
+    <link rel="stylesheet" href="style.css"></head><body>
+
+<canvas id="emoji-canvas"></canvas>
+<div id="save-indicator">Vault Synced ✨</div>
+
+<div class="container">
+    <header>
+        <h1>My Daily Dashboard</h1>
+        <div class="date-nav"><input type="date" id="dashboard-date"></div>
+    </header>
+
+    <section>
+        <h2>🧠 Emotional Check-In</h2>
+        <div class="mood-row">
+            <button class="mood-btn" data-val="1" onclick="selectMood(1)">😢</button>
+            <button class="mood-btn" data-val="2" onclick="selectMood(2)">😴</button>
+            <button class="mood-btn" data-val="3" onclick="selectMood(3)">😐</button>
+            <button class="mood-btn" data-val="4" onclick="selectMood(4)">🙂</button>
+            <button class="mood-btn" data-val="5" onclick="selectMood(5)">🥰</button>
+        </div>
+        <input type="hidden" id="mood_val">
+        <input type="text" id="one_word" placeholder="One word for today...">
+    </section>
+
+    <section>
+        <h2>💧 Hydration (8 Glasses)</h2>
+        <input type="hidden" id="water_val" value="0">
+        <div class="water-grid">
+            <span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span>
+            <span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span>
+        </div>
+        <div class="check-item"><input type="checkbox" id="warm_h2o"><span>Morning Warm Water (Lemon/Jeera)</span></div>
+    </section>
+
+    <section>
+        <h2>📚 Radiology & Biology</h2>
+        <div class="field"><label>Study Focus</label><input type="text" id="topic" placeholder="e.g. Lungs Anatomy"></div>
+        <div class="field"><label>Clinical Observations</label><textarea id="rad_notes" placeholder="What did I see in today's images?"></textarea></div>
+        <div class="check-item"><input type="checkbox" id="b1"><span>60m Focused Study Block</span></div>
+    </section>
+
+    <section>
+        <h2>🥗 Hormone-Balanced Nutrition</h2>
+        <div class="check-item"><input type="checkbox" id="nut_1"><span>Fruit & Seed Smoothie</span></div>
+        <div class="macro-tag"><span class="badge p-prot">P: 8g</span><span class="badge p-carb">C: 32g</span><span class="badge p-fat">F: 10g</span></div>
+        
+        <div class="check-item"><input type="checkbox" id="nut_2"><span>Paneer / Tofu / Curd</span></div>
+        <div class="macro-tag"><span class="badge p-prot">P: 18g</span><span class="badge p-carb">C: 4g</span><span class="badge p-fat">F: 14g</span></div>
+        
+        <div class="check-item"><input type="checkbox" id="nut_3"><span>Dal / Rajma + Multigrain</span></div>
+        <div class="macro-tag"><span class="badge p-prot">P: 12g</span><span class="badge p-carb">C: 40g</span><span class="badge p-fat">F: 5g</span></div>
+    </section>
+
+    <section>
+        <h2>🩸 Symptom Logger</h2>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div class="check-item"><input type="checkbox" id="s_bl"><span>Bloating</span></div>
+            <div class="check-item"><input type="checkbox" id="s_fat"><span>Fatigue</span></div>
+            <div class="check-item"><input type="checkbox" id="s_acne"><span>Acne</span></div>
+            <div class="check-item"><input type="checkbox" id="s_mood"><span>Mood Swings</span></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🌙 Night Reflection</h2>
+        <textarea id="win" placeholder="One thing I did well today..."></textarea>
+    </section>
+</div>
+
+<nav>
+    <a href="index.html" class="active">📊<br>Dash</a>
+    <a href="wellness.html">🥗<br>Wellness</a>
+    <a href="blog.html">✍️<br>Journal</a>
+    <a href="memories.html">📸<br>Photos</a>
+</nav>
+
+<script src="script.js"></script></body></html>

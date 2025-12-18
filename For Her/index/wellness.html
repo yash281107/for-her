@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness</title>
+  <link rel="stylesheet" href="style.css"></head><body>
+
+<nav>
+  <a href="index.html">🏠<br>Home</a>
+  <a href="wellness.html" class="active">🥗<br>Wellness</a>
+  <a href="blog.html">✍️<br>Diary</a>
+  <a href="memories.html">📸<br>Memories</a>
+</nav>
+
+<div class="container">
+  <h1>Your Wellness</h1>
+  <div class="progress-container"><div id="progress-bar"></div></div>
+
+  <p style="font-weight:600; margin-bottom:5px;">How are you feeling?</p>
+  <div class="mood-container">
+    <button class="mood-btn" data-mood="sad">😢</button>
+    <button class="mood-btn" data-mood="tired">😴</button>
+    <button class="mood-btn" data-mood="ok">😐</button>
+    <button class="mood-btn" data-mood="happy">😊</button>
+    <button class="mood-btn" data-mood="great">🥰</button>
+  </div>
+
+  <p style="font-weight:600;">Hydration (8 glasses)</p>
+  <div class="water-grid">
+    <span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span>
+    <span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span><span class="drop">💧</span>
+  </div>
+
+  <div style="display:flex; gap:10px; margin: 25px 0;">
+    <button onclick="showTab('meals', this)" class="tab-btn" style="background:#C97C8A; color:white;">Nutrition</button>
+    <button onclick="showTab('move', this)" class="tab-btn" style="background:#FBE4EA; color:#C97C8A;">Workout</button>
+  </div>
+
+  <div id="meals" class="tab-content">
+    <div class="exercise-card" style="border:none; padding:10px; margin-bottom:10px; display:flex; align-items:center; gap:10px;">
+        <input type="checkbox" id="m1"><span>Breakfast Smoothie & Eggs</span>
+    </div>
+    <div class="exercise-card" style="border:none; padding:10px; margin-bottom:10px; display:flex; align-items:center; gap:10px;">
+        <input type="checkbox" id="m2"><span>Healthy Lunch / Bowl</span>
+    </div>
+    <div class="exercise-card" style="border:none; padding:10px; margin-bottom:10px; display:flex; align-items:center; gap:10px;">
+        <input type="checkbox" id="m3"><span>Dinner & Evening Tea</span>
+    </div>
+  </div>
+
+  <div id="move" class="tab-content" style="display:none;">
+    <div class="exercise-card">
+      <div style="display:flex; justify-content:space-between"><h3>Jumping Jacks</h3><input type="checkbox" id="ex1"></div>
+      <div class="timer-display" id="t1">01:00</div>
+      <button class="action-btn" onclick="startTimer(60, 't1')">Start Warmup</button>
+    </div>
+    <div class="exercise-card">
+      <div style="display:flex; justify-content:space-between"><h3>Plank Hold</h3><input type="checkbox" id="ex2"></div>
+      <div class="timer-display" id="t2">00:45</div>
+      <button class="action-btn" onclick="startTimer(45, 't2')">Start Plank</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script></body></html>
